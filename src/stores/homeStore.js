@@ -16,7 +16,7 @@ const homeStore = create((set) => ({
   searchCoins: debounce(async () => {
     const {query, trending} = homeStore.getState()
 
-    if (query.length > 2) {    
+    if (query.length > 0) {    
       const res = await axios.get(`https://api.coingecko.com/api/v3/search?query=${query}`)
       const coins = res.data.coins.map(coin => (
         { name: coin.name, image: coin.large,id: coin.id }
