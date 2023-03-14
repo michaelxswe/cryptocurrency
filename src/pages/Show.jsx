@@ -23,7 +23,7 @@ export default function Show() {
       {store.data && ( 
       <>
         <header className = 'show-header'>
-          <img src = {store.data.image.large} />
+          <img src = {store.data.image.large} alt = 'Error' />
           <h2>{store.data.name} ({store.data.symbol})</h2>
         </header>
         <div className = 'width'>

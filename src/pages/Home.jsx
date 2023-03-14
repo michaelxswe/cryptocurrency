@@ -5,8 +5,9 @@ import List from '../components/List'
 
 export default function Home() {
   const store = homeStore()
-
-  React.useEffect(() => {store.fetchCoins()}, [])
+  React.useEffect(() => {
+    if(store.trending.length ===0) store.fetchCoins()
+  }, [])
 
   return (
     <div>
@@ -28,4 +29,3 @@ export default function Home() {
     </div>
   )
 }
-

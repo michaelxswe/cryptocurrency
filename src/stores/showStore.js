@@ -16,7 +16,6 @@ const showStore = create((set) => ({
       axios.get(`https://api.coingecko.com/api/v3/coins/${id}?localization=false&market_data=true`)
     ])
 
-
     const graphData = graphRes.data.prices.map(price => {
       const [timestamp, p] = price
       const date = new Date(timestamp).toLocaleDateString('en-us')

@@ -6,7 +6,7 @@ export default function List({coin}) {
     <div className = 'coin'>
       <Link to = {`/${coin.id}`}>
         <span className = 'coin-image'>
-          <img src = {coin.image} />
+          <img src = {coin.image} alt = 'Error'/>
         </span>
 
         <span className = 'coin-name'>
@@ -15,12 +15,12 @@ export default function List({coin}) {
 
        {coin.priceBtc && <span className = 'coin-prices'>
           <span className = 'coin-btc'>
-            <img src = '/bitcoin.webp' />
+            <img src = '/bitcoin.webp' alt = 'Error' />
             {coin.priceBtc} (BTC)
           </span>
 
           <span className = 'coin-usd'>
-            <img src = '/USD.webp' />
+            <img src = '/USD.webp' alt = 'Error' />
             {coin.priceUsd} (USD)
           </span>
         </span> }
